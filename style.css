@@ -1,0 +1,243 @@
+:root{
+    --primary: #1D58A1;
+    --secondary: #76bd3c;
+    --primary-light: #B4DDF0;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top bottom, #051937, #1D58A1);
+    background-color: #051937;
+}
+
+p, li{
+    font-size: 1rem;
+}
+
+header{
+    display: grid;
+    justify-items: end;
+    text-align: center;
+    padding-bottom: 5vmin;
+    background-color: var(--primary);
+    color: white;
+    overflow: hidden;
+    height: 400px;
+}
+
+#title{
+    width: 40vw;
+    position: absolute;
+    top: 20px;
+
+}
+
+#pp{
+    z-index: 3;
+    position: absolute;
+    top: 350px;
+    left: 20px;
+    cursor: pointer;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-content: center;
+    background-color: white;
+    box-shadow: 0px -12px 12px #000;
+    z-index: 2;
+}
+
+nav > a, nav > a:visited{
+    text-align: center;
+    border-bottom: 6px solid var(--primary);
+    padding: 6px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+nav > a:hover{
+    background-color: var(--primary);
+    background-image: linear-gradient(to right top, var(--primary), #051937);
+    font-weight: 700;
+    color: white;
+    border-bottom: 6px solid var(--secondary);
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+main > section, footer{
+    min-height: 30vmin;
+    padding: .8rem;
+}
+
+footer{
+    background-color: #111;
+}
+
+.link_button{
+    display: block;
+    margin: 3rem auto;
+    padding: .6rem;
+    border: 2px solid #76bd3c;
+    background-image: linear-gradient(to top, #051937, #051937,#051937,#1D58A1);
+    background-position: 0 -25%;
+    background-repeat: none;
+    background-color: #051937;
+    color: white;
+    text-align: center;
+    width: 40%;
+
+}
+
+.link_button:hover{
+    background-image: linear-gradient(to top, #1D58A1, #051937, #051937,#051937);
+}
+
+#speakers{
+    display: flex;
+    gap: 4vmin;
+}
+
+#speakers > section{
+    border: 2px solid #888;
+    padding: .4rem;
+    width: 50%;
+}
+
+#jump {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 20vmin;
+    color: var(--primary-light);
+    background-color: var(--primary);
+    text-align: center;
+    border: 2px solid var(--secondary);
+    padding: .5rem;
+    display: none;
+    border-radius: 3px;
+    filter:opacity(.75)
+}
+
+main > section::after{
+    content:  attr(id);
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    top: -60px;
+    right: 10px;
+    font-size: 5vmax;
+    text-align: right;
+    /*z-index:-1;*/
+    color: var(--secondary);
+    filter:opacity(.15);
+    z-index: -1;
+}
+
+#background-video{
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+h2{
+    color: var(--primary);
+}
+
+#logo{
+    display: block;
+    z-index: 4;
+    width: 10vmax;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: white;
+}
+
+input, textarea{
+    display: block;
+    width: 60%;
+    margin: .2rem auto;
+    padding: .6rem;
+}
+
+input{
+    height: 60px;
+}
+
+button{
+    display: block;
+    width: 60%;
+    height: 60px;
+    margin: 12px auto;
+    z-index: 5;
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+li::marker{
+    content:"🌠";
+
+}
+
+footer > p{
+    color: white;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+@media (max-width: 1000px){
+    header{
+        height: 400px;
+    }
+
+    #speakers{
+        flex-direction: column;
+    }
+
+    #speakers > section{
+        width: 100%;
+    }
+
+
+    #background-video{
+        width: 500%;
+        top: -200px;
+    }
+
+    #title{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #logo{
+        left: calc(100vw / 2 - 5vmax);
+    }
+    #speakers > section{
+       display: block;
+    }
+    nav > a{
+        display: none;
+    }
+
+    input, textarea, button{
+        width: 100%;
+    }
+}
