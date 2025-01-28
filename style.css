@@ -203,6 +203,16 @@ footer > p{
     text-align: center;
 }
 
+.sg{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: end;
+}
+
+.sg > h4{
+    margin-bottom: .2rem;
+}
+
 @media (max-width: 1000px){
     header{
         height: 400px;
