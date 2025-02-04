@@ -213,6 +213,16 @@ footer > p{
     margin-bottom: .2rem;
 }
 
+#spon_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#spon_grid > img{
+    width: 100%;
+    display: inline;
+}
+
 @media (max-width: 1000px){
     header{
         height: 400px;
