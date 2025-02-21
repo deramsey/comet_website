@@ -216,6 +216,7 @@ footer > p{
 #spon_grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
 }
 
 #spon_grid > img{
